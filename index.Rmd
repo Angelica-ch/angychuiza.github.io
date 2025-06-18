@@ -1,0 +1,61 @@
+---
+title: "Análisis de Gráficos - Dataset Boston"
+author: "Angelica Paola Chuiza Chamorro"
+asignatura: "Programación Estadística"
+date: "`r Sys.Date()`"
+---
+
+# Análisis de Resultados
+
+---
+
+## 1. Gráfico de Dispersión 3D: `lstat`, `rm`, `medv`
+
+Este gráfico permite observar la relación conjunta entre tres variables clave:
+
+- `lstat`: Porcentaje de población con bajo estatus socioeconómico.
+- `rm`: Número promedio de habitaciones por vivienda.
+- `medv`: Valor medio de la vivienda (variable objetivo).
+
+### Interpretación:
+
+-A medida que `lstat` aumenta (más pobreza), medv tiende a disminuir.
+-A menor `lstat` (menos pobreza) y mayor `rm` (más habitaciones), los valores de `medv` tienden a ser más altos.
+- El gráfico muestra una pendiente negativa respecto a `lstat` y positiva respecto a `rm`, lo que sugiere que ambas variables tienen una influencia clara sobre el valor de la vivienda.
+- Los puntos se agrupan de forma que permiten observar un plano inclinado en el espacio 3D, característico de una relación múltiple.
+
+---
+
+## 2. Histograma con Curva de Densidad de `lstat`
+
+Este gráfico muestra la distribución de la variable `lstat` (estatus socioeconómico bajo) en todos los barrios de Boston.
+
+### Interpretación:
+
+- La mayoría de las zonas tienen un porcentaje bajo de personas con estatus socioeconómico bajo (valores menores a 15).
+- La distribución es asimétrica a la derecha (sesgada), lo que significa que hay pocas zonas con valores extremadamente altos de `lstat`.
+- La curva de densidad suavizada resalta la forma de la distribución y sugiere que la variable no sigue una distribución normal.
+
+---
+
+## 3. Diagrama de Dispersión 2D: `lstat` vs `medv`
+
+Este gráfico evalúa la relación entre `lstat` (pobreza) y `medv` (valor medio de la vivienda), coloreando según la variable `chas` (si la zona colinda con el río Charles).
+
+### Interpretación:
+
+- Existe una **relación negativa** entre `lstat` y `medv`. A mayor pobreza, menor valor de la vivienda.
+- La línea de suavizado, nos permite observar la relacion no lineal.
+- El color muestra que las viviendas cercanas al río `chas = 1` no presentan una diferencia muy marcada respecto a las otras en cuanto al valor promedio, aunque hay ligeras variaciones.
+
+---
+
+## Conclusión General
+
+Los tres gráficos complementan el análisis y confirman que el porcentaje de pobreza (`lstat`) y el número de habitaciones (`rm`) tienen un efecto considerable sobre el valor medio de las viviendas (`medv`). 
+
+Es decir:
+- `lstat` es una variable clave: más pobreza → menor precio de viviendas (medv); `rm` nos muestra que entre: más habitaciones → mayor valor de vivienda.
+
+Además, el análisis 3D aporta una visión más integral de cómo estas variables interactúan simultáneamente.
+
